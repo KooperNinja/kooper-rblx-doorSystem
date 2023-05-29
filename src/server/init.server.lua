@@ -7,12 +7,12 @@ Players.PlayerAdded:Connect(function (player)
 end)
 
 
-local mySystem = require(ReplicatedStorage.Shared.DoorSystem)
+local doorSystem = require(ReplicatedStorage.Shared.DoorSystem)
 
-mySystem:loadDoors()
-mySystem:loadButtons()
+doorSystem:loadDoors()
+doorSystem:loadButtons()
 
-local door = mySystem:findDoorByName("TestDoor")
+local door = doorSystem:findDoorByName("TestDoor")
 
 for k,part in pairs(door.parts) do
     part.Touched:Connect(function(otherPart)
