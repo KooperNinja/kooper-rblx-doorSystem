@@ -63,14 +63,14 @@ Inside the `DoorSystem` file you need to add a new door to the `DoorSystem.Doors
 ```
 Now you've set up your own door.
 
-##Find A Door
+## Find A Door
 To find a door use the `doorSystem:findDoorByName()` function.
 
 ```lua
 local door = doorSystem:findDoorByName("YourDoor")
 ```
 
-##Open A Door
+## Open A Door
 After your found your door you can use the `door:trigger()` function to trigger it:
 If closed                   -> it opens,
 If open                     -> it closes,
