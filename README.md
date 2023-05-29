@@ -16,7 +16,7 @@ And the buttons with:
 doorSystem:loadButtons()()
 ```
 
-##Add Your Own Doors
+## Add Your Own Doors
 To **Add** your own door you start by creating the a folder with your `DoorName` inside the `DoorSystem.Doors` folder in your `Workspace`.
 
 Inside this folder put your DoorParts in a linear order.
