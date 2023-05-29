@@ -63,14 +63,14 @@ Inside the `DoorSystem` file you need to add a new door to the `DoorSystem.Doors
 ```
 Now you've set up your own door.
 
-## Find A Door
+## Find a Door
 To find a door use the `doorSystem:findDoorByName()` function.
 
 ```lua
 local door = doorSystem:findDoorByName("YourDoor")
 ```
 
-## Open A Door
+## Open a Door
 After your found your door you can use the `door:trigger()` function to trigger it:
 If closed                   -> it opens,
 If open                     -> it closes,
@@ -88,4 +88,26 @@ door:open()
 or
 ```lua
 door:close()
+```
+
+## Working with Buttons
+The button feature let's you trigger one or multiple Doors with a Part acting as a Button.
+
+First create a Part inside the `DoorSystem.DoorButtons` folder.
+Add a `ClickDetector` to the Part.
+Then create a folder inside of the Part called `DoorNames`
+Inside of this folder, add ``String Values`` with the Value set to your DoorName.
+```
+DoorSystem
+├── DoorButtons
+│   ├── Button
+│   │   ├── DoorNames
+│   │   │   ├── 1 -> Value: YourDoor
+│   │   │   ├── 2 -> Value: OtherDoor
+│   │   ├── ClickDetector
+├── Doors
+```
+Now load the Buttons with
+```lua
+doorSystem:loadButtons()
 ```
